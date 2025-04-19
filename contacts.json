@@ -1,0 +1,16 @@
+[
+  {
+    "name": "John",
+    "last_name": "Doe",
+    "phone": "123-456-7890",
+    "email": "john.doe@example.com",
+    "street": "123 Main St",
+    "Enum": "A1",
+    "Inum": "B2",
+    "col": "Downtown",
+    "mun": "Springfield",
+    "city": "Springfield",
+    "state": "IL",
+    "country": "USA"
+  }
+]

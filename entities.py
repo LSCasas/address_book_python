@@ -27,16 +27,22 @@ def console_log(func):
     return wrapper
 
 def save_data(file_name, data):
-    """Save the new content
+    """Save the new contect
 
     Args:
-        file_name (_type_): name of the file
-        data (_type_): dictionary
+        file_name (_type_): name or path of the file
+        data (_type_): new content
 
     Returns:
-        The updated file 
+        _type_: create o overwrite the file_name
     """
-    content = files.read(file_name)
+    try:
+        content = files.read(file_name)
+    except FileNotFoundError:
+        return files.create(file_name, [data])
+    except Exception as e:
+        return files.create(file_name, [data])
+    
     return files.update(file_name, data)
 
 class Contact:
